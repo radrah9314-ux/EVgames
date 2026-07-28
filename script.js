@@ -1,4 +1,4 @@
-impot {
+import {
     auth,
     provider,
     signInWithPopup,
