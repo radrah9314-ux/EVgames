@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: url('images/—Pngtree—abstract iridescent liquid metal surface_20426161.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    padding: 30px;
+}
+
+
+.profile-card {
+    position: relative;
+
+    width: 450px;
+    min-height: 550px;
+
+    padding: 55px 40px 40px;
+
+    background: rgba(255, 255, 255, 0.15);
+
+    border: 2px solid rgba(255, 255, 255, 0.5);
+
+    border-radius: 25px;
+
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+
+    box-shadow:
+        0 0 30px rgba(0, 0, 0, 0.35);
+
+    text-align: center;
+}
+
+
+.back-button {
+    position: absolute;
+
+    top: 20px;
+    left: 25px;
+
+    color: #fff;
+
+    text-decoration: none;
+
+    font-size: 0.95em;
+    font-weight: 500;
+
+    transition: 0.3s;
+}
+
+.back-button:hover {
+    text-decoration: underline;
+}
+
+
+.profile-image {
+    width: 120px;
+    height: 120px;
+
+    margin: 10px auto 20px;
+
+    border-radius: 50%;
+
+    overflow: hidden;
+
+    border: 4px solid rgba(255, 255, 255, 0.8);
+
+    background: rgba(255, 255, 255, 0.25);
+
+    box-shadow:
+        0 0 20px rgba(0, 0, 0, 0.25);
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+.profile-card h1 {
+    color: #fff;
+
+    font-size: 2em;
+    font-weight: 600;
+
+    margin-bottom: 5px;
+}
+
+
+.profile-card > p {
+    color: rgba(255, 255, 255, 0.9);
+
+    font-size: 0.95em;
+
+    margin-bottom: 30px;
+
+    word-break: break-word;
+}
+
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+
+    gap: 15px;
+
+    width: 100%;
+
+    margin-bottom: 30px;
+}
+
+.info-box {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+
+    padding: 14px 18px;
+
+    background: rgba(255, 255, 255, 0.18);
+
+    border: 1px solid rgba(255, 255, 255, 0.35);
+
+    border-radius: 10px;
+
+    text-align: left;
+}
+
+.info-box span {
+    color: rgba(255, 255, 255, 0.8);
+
+    font-size: 0.9em;
+}
+
+.info-box strong {
+    color: #fff;
+
+    font-size: 0.95em;
+    font-weight: 500;
+
+    max-width: 60%;
+
+    text-align: right;
+
+    word-break: break-word;
+}
+
+
+.logout-button {
+    width: 100%;
+    height: 48px;
+
+    border: 2px solid #fff;
+
+    border-radius: 7px;
+
+    background: #162938;
+
+    color: #fff;
+
+    font-size: 1em;
+    font-weight: 500;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.logout-button:hover {
+    background: #fff;
+
+    color: #162938;
+}
+
+
+@media (max-width: 500px) {
+
+    body {
+        padding: 20px;
+    }
+
+    .profile-card {
+        width: 100%;
+
+        padding: 50px 25px 30px;
+    }
+
+    .profile-card h1 {
+        font-size: 1.7em;
+    }
+
+    .info-box {
+        padding: 12px 14px;
+    }
+
+    .info-box strong {
+        max-width: 55%;
+    }
+
+}
