@@ -153,55 +153,23 @@ registerForm.addEventListener("submit", async (event) => {
 });
 
 
-const googleButton = document.querySelector(".g_id_signin");
+const googleButton = document.querySelector("#googleLogin");
 
-
-window.handleCredentialResponse = async function () {
-
+googleButton.addEventListener("click", async () => {
     try {
-
-        const result = await signInWithPopup(
-            auth,
-            provider
-        );
-
-        const user = result.user;
+        await signInWithPopup(auth, provider);
 
         console.log("Google login successful!");
-        console.log("Name:", user.displayName);
-        console.log("Email:", user.email);
-        console.log("Photo:", user.photoURL);
 
         wrapper.classList.remove("active-popup");
         wrapper.classList.remove("active");
 
     } catch (error) {
-
         console.error("Google login error:", error);
-
+        console.log("Firebase error code:", error.code);
+        console.log("Firebase error message:", error.message);
         alert(getFirebaseErrorMessage(error));
-
     }
-
-};
-
-
-profileButton.addEventListener("click", (event) => {
-
-    event.stopPropagation();
-
-    if (
-        profileDropdown.style.display === "block"
-    ) {
-
-        profileDropdown.style.display = "none";
-
-    } else {
-
-        profileDropdown.style.display = "block";
-
-    }
-
 });
 
 
